@@ -44,9 +44,11 @@ export const WorkBox = ({
   websiteLink,
 }: WorkBoxProps) => {
   return (
-    <div className="bg-[rgba(38,38,38,.6)] border-[1px] border-gray-500 rounded-md p-5 relative">
+    <div className="bg-[rgba(38,38,38,.6)] border-[1px] border-gray-500 rounded-md p-5 relative max-w-[400px] mx-auto">
       <div className="absolute top-[5px] right-[10px] flex items-center gap-2">
-        <CiLink size={28} />
+        <Link href={websiteLink}>
+          <CiLink size={28} />
+        </Link>
         {githubLink && <FaGithub size={22} />}
       </div>
 

@@ -5,7 +5,7 @@ import { WorkBox } from "../WorkBox";
 const works = [
   {
     title: "ProstaMaturka",
-    engTitle: "EasyMathExam",
+    engTitle: "EasyExam",
     description:
       "Built frontend and backend with next.js. It's a course platform for high school graduates who learn for leaving exam. It implements features like authentication, payments, custom videoplayer, tracking user progress, analytics and more.",
     skills: ["React", "NextJS", "MongoDB", "Resend"],
@@ -40,7 +40,7 @@ export const WorksSection = () => {
       <p className="text-center mb-4 text-sm text-gray-300 max-w-[80%] mx-auto">
         Projects with no github shown are production projects
       </p>
-      <div className="flex flex-wrap items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4 max-w-[1400px] mx-auto">
         {works.map((work) => (
           <WorkBox key={work.title} {...work} />
         ))}

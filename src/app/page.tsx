@@ -10,7 +10,7 @@ import { Footer } from "@/components/landing/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="grainy text-white p-10">
+    <div className="text-white pt-10">
       <LandingSection>
         <Navbar />
       </LandingSection>

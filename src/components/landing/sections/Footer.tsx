@@ -3,7 +3,7 @@ import { LandingSection } from "../LandingSection";
 
 export const Footer = () => {
   return (
-    <LandingSection>
+    <LandingSection className="p-1 mb-0 pb-0">
       <div className="flex flex-wrap justify-center items-center gap-2">
         <Link
           href="https://github.com/MichalKaniowski"

@@ -1,9 +1,8 @@
 import { LandingSection, LandingSectionHeading } from "../LandingSection";
 import Image from "next/image";
-import { FaPeopleArrows } from "react-icons/fa";
 
 const WorkflowBox = ({ children }: { children: React.ReactNode }) => {
-  return <div className="p-2 mx-auto">{children}</div>;
+  return <div className="p-2 mx-auto max-w-[400px]">{children}</div>;
 };
 
 const WorkflowHeading = ({ children }: { children: React.ReactNode }) => {
@@ -24,7 +23,8 @@ export const WorkflowSection = () => {
       <LandingSectionHeading className="mb-6">
         How I get things done?
       </LandingSectionHeading>
-      <div className="flex flex-wrap justify-center items-center gap-3">
+      {/* grid grid-cols-1 md:grid-cols-2 */}
+      <div className="flex flex-wrap justify-center items-center gap-2 mx-auto max-w-[1400px]">
         <WorkflowBox>
           <Image
             width={50}
