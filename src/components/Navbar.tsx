@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Ping } from "@/components/ui/Ping";
 import Link from "next/link";
+import { EmailButtonWrapper } from "./EmailButtonWrapper";
 
 export const Navbar = () => {
   return (
@@ -17,10 +18,12 @@ export const Navbar = () => {
         </Link>
       </div>
       <div>
-        <button className="text-sm text-gray-500 border-[1px] border-gray-500 p-[10px] rounded-md flex gap-2 items-center hover:opacity-70">
-          <Ping />
-          <span>Send me an email</span>
-        </button>
+        <EmailButtonWrapper>
+          <button className="text-sm text-gray-500 border-[1px] border-gray-500 p-[10px] rounded-md flex gap-2 items-center hover:opacity-70">
+            <Ping />
+            <span>Send me an email</span>
+          </button>
+        </EmailButtonWrapper>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { TrustedByClients } from "@/components/ui/TrustedByClients";
 import { LandingSection } from "../LandingSection";
 import Image from "next/image";
 import { Ping } from "@/components/ui/Ping";
+import { EmailButtonWrapper } from "@/components/EmailButtonWrapper";
 
 export const IntroSection = () => {
   return (
@@ -26,15 +27,19 @@ export const IntroSection = () => {
       </p>
 
       <div className="mt-7">
-        <button className="flex justify-center items-center gap-1 mx-auto border-[1px] bg-dark-lighter border-darkborder rounded-2xl px-4 py-4 mb-2">
-          <Image
-            src="/images/email.svg"
-            width={30}
-            height={30}
-            alt="get in touch"
-          />
-          <span className="text-xl">Get in touch</span>
-        </button>
+        <div className="flex justify-center items-center">
+          <EmailButtonWrapper>
+            <button className="flex justify-center items-center gap-1 border-[1px] bg-dark-lighter border-darkborder rounded-2xl px-4 py-4 mb-2">
+              <Image
+                src="/images/email.svg"
+                width={30}
+                height={30}
+                alt="get in touch"
+              />
+              <span className="text-xl">Get in touch</span>
+            </button>
+          </EmailButtonWrapper>
+        </div>
         <div className="flex justify-center items-center gap-2">
           <Ping />
           <span className="text-gray-400 text-sm">Available Now</span>
