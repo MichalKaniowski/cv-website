@@ -1,99 +1,82 @@
-import { LandingSection, LandingSectionHeading } from "../LandingSection";
-
-import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiTailwindcss, SiTestinglibrary } from "react-icons/si";
-import { FaSheetPlastic } from "react-icons/fa6";
+import {
+  LandingSecondaryHeading,
+  LandingSection,
+  LandingSectionHeading,
+} from "../LandingSection";
+import Image from "next/image";
 
 const HighlightedText = ({ children }: { children: React.ReactNode }) => {
   return <span className="text-white mx-1 font-medium">{children}</span>;
 };
 
-const SkillBox = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div className="py-5 px-10 bg-[rgba(38,38,38,.6)] text-white border-[0.5px] border-gray-400 rounded-md">
-      {children}
-    </div>
-  );
-};
-
 export const AboutMeSection = () => {
+  const paragraphClassName =
+    "text-lg tracking-tighter text-white/60 md:text-xl";
+  const headingClassName =
+    "mb-4 mt-8 text-left text-2xl tracking-tighter text-white";
+
   return (
     <LandingSection>
       <div className="mb-5 sm:mb-7">
-        {/* <p className="text-xl text-gray-300  text-center mb-[-4px]">ABOUT ME</p> */}
-        <LandingSectionHeading className="mb-3">
-          Get to know me
-        </LandingSectionHeading>
-        <p className="text-lg text-gray-300 tracking-tight text-center text-balance sm:text-xl max-w-[800px] mx-auto">
-          Hi I&apos;m Michael. A dedicated
-          <HighlightedText>web developer</HighlightedText>
-          based in Poland with
-          <HighlightedText>1 year of experience.</HighlightedText>
-          Specializing in
-          <HighlightedText>full-stack app development.</HighlightedText>
-          My primary focus is to create performant websites with seamless user
-          experience.
-        </p>
-      </div>
-
-      <div className="max-w-[700px] mx-auto">
-        <h3 className="text-2xl mb-2 max-w-[700px] mx-auto">Technical</h3>
-        <div className="flex justify-center items-center flex-wrap gap-3 mb-6">
-          <p className="text-gray-300 sm:text-lg">
-            My development roots are in React and Node.js and in general
-            anything Javascript/Typescript related in React ecosystem.
-          </p>
-          <p className="text-gray-300 sm:text-lg">
-            Furthemore I have experience in building native apps with react
-            native and scraping and automation bots with node.js.
-          </p>
-          <SkillBox>
-            <FaHtml5 size={45} className="mx-auto" color="#e34c26" />
-            <p className="text-center">HTML</p>
-          </SkillBox>
-
-          <SkillBox>
-            <FaCss3Alt size={45} className="mx-auto" color="#2965f1" />
-            <p className="text-center">CSS</p>
-          </SkillBox>
-
-          <SkillBox>
-            <SiTailwindcss size={45} className="mx-auto" color="#06b6d4" />
-            <p className="text-center">Tailwind</p>
-          </SkillBox>
-
-          <SkillBox>
-            <FaReact size={45} className="mx-auto" color="#61DBFB" />
-            <p className="text-center">React</p>
-          </SkillBox>
-
-          <SkillBox>
-            <TbBrandNextjs size={45} className="mx-auto" />
-            <p className="text-center">NextJS</p>
-          </SkillBox>
-
-          <SkillBox>
-            <SiTestinglibrary size={45} className="mx-auto" color="#C41E3A" />
-            <p className="text-center ">React Testing Libary</p>
-          </SkillBox>
-
-          {/* // TODO: add mongodb, express, prisma maybe, react native, maybe add text to skills section */}
+        <div className="mb-4">
+          <LandingSecondaryHeading>ABOUT ME</LandingSecondaryHeading>
+          <LandingSectionHeading className="mb-3">
+            Get to know me
+          </LandingSectionHeading>
         </div>
 
-        <h3 className="text-2xl mb-2">Personal</h3>
-        <p className="text-gray-300 sm:text-lg mb-6">
-          I&apos;m actively involved in creating freelance projects for my
-          clients. In my personal time I like to make my own saas projects.
-          I&apos;m passionate about web development, physics and machine
-          learning.
-        </p>
-      </div>
+        <div className="px-4">
+          <p className={paragraphClassName}>
+            Hi I&apos;m Michael. A dedicated
+            <HighlightedText>web developer</HighlightedText>
+            based in Poland with
+            <HighlightedText>
+              over 1 year of professional work experience.
+            </HighlightedText>
+            Specializing in
+            <HighlightedText>full-stack app development.</HighlightedText>
+            My primary focus is to create performant websites with seamless user
+            experience.
+          </p>
 
-      <button className="flex items-center gap-2 mx-auto border-[1px] border-gray-300 p-3 rounded-lg bg-[rgba(38,38,38,.6)] mb-6">
-        <FaSheetPlastic size={24} />
-        <span className="text-xl">Resume</span>
-      </button>
+          {/* <div className="max-w-[700px] mx-auto"> */}
+          <h3 className={headingClassName}>Technical</h3>
+          <div className="flex justify-center items-center flex-wrap gap-3 mb-6">
+            <p className={paragraphClassName}>
+              My development roots are in React and Node.js and in general
+              anything Javascript/Typescript related in React ecosystem.
+            </p>
+            <p className={paragraphClassName}>
+              Furthemore I have experience in building native apps with react
+              native and bots with node.js.
+            </p>
+
+            {/* // TODO: add mongodb, express, prisma maybe, react native, maybe add text to skills section */}
+          </div>
+
+          <h3 className={headingClassName}>Personal</h3>
+          <p className={paragraphClassName}>
+            I&apos;m actively involved in creating freelance projects for my
+            clients. In my personal time I like to make my own saas projects.
+            I&apos;m passionate about web development, physics and machine
+            learning.
+          </p>
+          {/* </div> */}
+
+          <button className="flex items-center gap-2 mx-auto border-[1px] border-gray-400 p-4 rounded-lg bg-dark mt-8">
+            {/* <FaSheetPlastic size={24} />
+             */}
+            <Image
+              src="/images/resume.svg"
+              width={25}
+              height={25}
+              className=""
+              alt="resume"
+            />
+            <span className="text-xl">Resume</span>
+          </button>
+        </div>
+      </div>
     </LandingSection>
   );
 };

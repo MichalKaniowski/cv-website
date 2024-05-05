@@ -12,29 +12,6 @@ interface WorkBoxProps {
   websiteLink: string;
 }
 
-const LinkToProject = ({ url }: { url: string }) => {
-  return (
-    <Link
-      href={url}
-      className="bg-gray-100 text-gray-500 p-[2px] rounded-lg flex justify-center items-center gap-1 text-sm"
-    >
-      <CiLink size={22} />
-      <span>{url}</span>
-    </Link>
-  );
-};
-
-const LinkToGithub = ({ url }: { url: string }) => {
-  return (
-    <Link
-      href={url}
-      className="bg-[rgba(38,38,38,.6)] text-gray-500 p-[4px] rounded-lg border-[1px] border-gray-300 flex justify-center items-center gap-1 text-sm w-[30%] mx-auto"
-    >
-      <FaGithub size={22} />
-    </Link>
-  );
-};
-
 export const WorkBox = ({
   title,
   engTitle,
@@ -44,12 +21,16 @@ export const WorkBox = ({
   websiteLink,
 }: WorkBoxProps) => {
   return (
-    <div className="bg-[rgba(38,38,38,.6)] border-[1px] border-gray-500 rounded-md p-5 relative max-w-[400px] mx-auto">
+    <div className="bg-dark border-[1px] border-gray-500 rounded-md p-5 relative max-w-[400px] mx-auto">
       <div className="absolute top-[5px] right-[10px] flex items-center gap-2">
-        <Link href={websiteLink}>
+        <Link href={websiteLink} target="_blank">
           <CiLink size={28} />
         </Link>
-        {githubLink && <FaGithub size={22} />}
+        {githubLink && (
+          <Link href={githubLink} target="_blank">
+            <FaGithub size={22} />
+          </Link>
+        )}
       </div>
 
       <div className="mb-3">
@@ -60,7 +41,7 @@ export const WorkBox = ({
           )}
         </h4>
       </div>
-      <p className="text-gray-300">{description}</p>
+      <p className="mb-5 text-base text-white/60">{description}</p>
 
       <div className="flex flex-wrap items-center gap-2 mt-6">
         {skills.map((skill) => (

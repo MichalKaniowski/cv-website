@@ -1,4 +1,8 @@
-import { LandingSection, LandingSectionHeading } from "../LandingSection";
+import {
+  LandingSecondaryHeading,
+  LandingSection,
+  LandingSectionHeading,
+} from "../LandingSection";
 import Image from "next/image";
 
 const WorkflowBox = ({ children }: { children: React.ReactNode }) => {
@@ -7,7 +11,7 @@ const WorkflowBox = ({ children }: { children: React.ReactNode }) => {
 
 const WorkflowHeading = ({ children }: { children: React.ReactNode }) => {
   return (
-    <h3 className="text-2xl font-medium text-center mt-2 mb-3 text-balance">
+    <h3 className="text-2xl font-medium text-center mt-2 mb-2 text-balance">
       {children}
     </h3>
   );
@@ -20,6 +24,7 @@ const WorkflowParagraph = ({ children }: { children: React.ReactNode }) => {
 export const WorkflowSection = () => {
   return (
     <LandingSection>
+      <LandingSecondaryHeading>workflow</LandingSecondaryHeading>
       <LandingSectionHeading className="mb-6">
         How I get things done?
       </LandingSectionHeading>
@@ -71,7 +76,7 @@ export const WorkflowSection = () => {
         </WorkflowBox>
       </div>
 
-      <div className="flex flex-col gap-2 mt-4">
+      <div className="flex flex-col gap-2 mt-6">
         <div className="flex items-center justify-center gap-2">
           <p className="text-sm text-gray-300">Payments via Stripe</p>
           <Image width={20} height={20} src="/images/stripe-icon.svg" alt="" />
