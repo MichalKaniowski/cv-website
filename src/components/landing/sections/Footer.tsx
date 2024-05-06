@@ -4,7 +4,7 @@ import { LandingSection } from "../LandingSection";
 export const Footer = () => {
   const currYear = new Date().getFullYear();
   return (
-    <LandingSection className="mb-5">
+    <LandingSection className="mb-4 md:mb-4 lg:mb-4">
       <div className="flex flex-wrap justify-center items-center gap-2 mb-1">
         <Link
           href="https://github.com/MichalKaniowski"
@@ -28,7 +28,7 @@ export const Footer = () => {
           Resume
         </Link>
       </div>
-      <p className="text-sm text-gray-400 text-center">
+      <p className="text-sm text-gray-500 text-center">
         © {currYear} Michał Kaniowski. All rights deserved.
       </p>
     </LandingSection>

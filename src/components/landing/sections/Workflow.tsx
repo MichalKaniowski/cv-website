@@ -25,11 +25,11 @@ export const WorkflowSection = () => {
   return (
     <LandingSection>
       <LandingSecondaryHeading>workflow</LandingSecondaryHeading>
-      <LandingSectionHeading className="mb-6">
+      <LandingSectionHeading className="mb-6 lg:mb-8">
         How I get things done?
       </LandingSectionHeading>
       {/* grid grid-cols-1 md:grid-cols-2 */}
-      <div className="flex flex-wrap justify-center items-center gap-2 mx-auto max-w-[1400px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mx-auto max-w-[1400px]">
         <WorkflowBox>
           <Image
             width={50}
@@ -76,7 +76,7 @@ export const WorkflowSection = () => {
         </WorkflowBox>
       </div>
 
-      <div className="flex flex-col gap-2 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mt-6 lg:mt-8 max-w-[800px] mx-auto">
         <div className="flex items-center justify-center gap-2">
           <p className="text-sm text-gray-300">Payments via Stripe</p>
           <Image width={20} height={20} src="/images/stripe-icon.svg" alt="" />

@@ -12,7 +12,7 @@ import { TestimonialsSection } from "@/components/landing/sections/Testimonials"
 
 export default function Home() {
   return (
-    <div className="text-white pt-10">
+    <div className="text-white pt-10 max-w-7xl mx-auto">
       <LandingSection>
         <Navbar />
       </LandingSection>

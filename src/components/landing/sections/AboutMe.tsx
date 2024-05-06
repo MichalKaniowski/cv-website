@@ -17,7 +17,7 @@ export const AboutMeSection = () => {
 
   return (
     <LandingSection>
-      <div className="mb-5 sm:mb-7">
+      <div className="mb-5 sm:mb-7 max-w-xl mx-auto">
         <div className="mb-4">
           <LandingSecondaryHeading>ABOUT ME</LandingSecondaryHeading>
           <LandingSectionHeading className="mb-3">
@@ -27,7 +27,7 @@ export const AboutMeSection = () => {
 
         <div className="px-4">
           <p className={paragraphClassName}>
-            Hi I&apos;m Michael. A dedicated
+            Hi I&apos;m a dedicated
             <HighlightedText>web developer</HighlightedText>
             based in Poland with
             <HighlightedText>

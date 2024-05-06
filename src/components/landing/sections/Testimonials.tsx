@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Alexander Hipp",
     message:
-      "I highly recommend collaborating with Mike. He built my website recently, and I'm extremely pleased. He's professional, reliable, and works quickly.  His flexibility and great communication are a big plus.",
+      "I highly recommend collaborating with Mike. He built my website recently, and I'm extremely pleased. He's professional, reliable and works quickly.  His flexibility and great communication are a big plus.",
     imgSrc: "/images/testimonials4.jpg",
   },
   {
@@ -48,7 +48,7 @@ export const TestimonialsSection = () => {
       <LandingSectionHeading className="mb-10">
         Words from Clients
       </LandingSectionHeading>
-      <div className="flex flex-col gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.name}

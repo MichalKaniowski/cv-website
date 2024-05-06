@@ -21,7 +21,7 @@ export const WorkBox = ({
   websiteLink,
 }: WorkBoxProps) => {
   return (
-    <div className="bg-dark border-[1px] border-gray-500 rounded-md p-5 relative max-w-[400px] mx-auto">
+    <div className="bg-dark border-[1px] border-gray-500 rounded-xl p-6 md:p-8 relative max-w-[500px] mx-auto">
       <div className="absolute top-[5px] right-[10px] flex items-center gap-2">
         <Link href={websiteLink} target="_blank">
           <CiLink size={28} />

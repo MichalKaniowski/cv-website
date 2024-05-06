@@ -39,7 +39,7 @@ export const WorksSection = () => {
       <p className="text-center mb-8 text-sm text-gray-300 max-w-[80%] mx-auto">
         Projects with no github shown are production projects
       </p>
-      <div className="flex flex-wrap items-center gap-6 max-w-[1400px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:px-3 gap-6 max-w-[1050px] mx-auto">
         {works.map((work) => (
           <WorkBox key={work.title} {...work} />
         ))}
