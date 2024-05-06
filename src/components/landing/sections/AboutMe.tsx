@@ -39,7 +39,6 @@ export const AboutMeSection = () => {
             experience.
           </p>
 
-          {/* <div className="max-w-[700px] mx-auto"> */}
           <h3 className={headingClassName}>Technical</h3>
           <div className="flex justify-center items-center flex-wrap gap-3 mb-6">
             <p className={paragraphClassName}>
@@ -61,11 +60,8 @@ export const AboutMeSection = () => {
             I&apos;m passionate about web development, physics and machine
             learning.
           </p>
-          {/* </div> */}
 
-          <button className="flex items-center gap-2 mx-auto border-[1px] border-gray-400 p-4 rounded-lg bg-dark mt-8">
-            {/* <FaSheetPlastic size={24} />
-             */}
+          <button className="flex items-center gap-2 mx-auto border-[1px] border-gray-400 p-4 rounded-lg bg-dark mt-8 hover:opacity-70">
             <Image
               src="/images/resume.svg"
               width={25}

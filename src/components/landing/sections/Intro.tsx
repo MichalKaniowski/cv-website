@@ -29,7 +29,7 @@ export const IntroSection = () => {
       <div className="mt-8 md:mt-12">
         <div className="flex justify-center items-center">
           <EmailButtonWrapper>
-            <button className="flex justify-center items-center gap-1 border-[1px] bg-dark-lighter border-darkborder rounded-2xl px-4 py-4 mb-2">
+            <button className="flex justify-center items-center gap-1 border-[1px] bg-dark-lighter border-darkborder rounded-2xl px-4 py-4 mb-2 hover:opacity-70">
               <Image
                 src="/images/email.svg"
                 width={30}
